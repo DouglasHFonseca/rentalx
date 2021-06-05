@@ -17,7 +17,6 @@ class UploadCarImagesUseCase {
   ) {}
   async execute({ car_id, images_name }: IRequest): Promise<void> {
     const carExists = await this.carsImagesRepository.findByIdCar(car_id);
-    console.log(carExists);
     if (carExists) {
       await this.carsImagesRepository.deleteCarImages(car_id);
       images_name.map(async (image) => {
