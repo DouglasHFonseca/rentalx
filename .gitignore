@@ -7,3 +7,7 @@ env
 .lock
 .png
 vscode
+coverage
+tmp/*
+!tmp/.gitkeep
+ormconfig.json
